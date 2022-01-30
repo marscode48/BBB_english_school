@@ -4,114 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Furniture Design</title>
+    <title>BBB英会話スクール</title>
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキスト">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="styles/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/jquery.inview.min.js"></script>
   </head>
 
   <body>
-    <header class="header wrapper">
+    <header class="header">
       <h1 class="site-title">
-        <a href="#">
-          <img src="images/logo.svg" alt="Furniture Design">
-        </a>
+        <a href="#"><img src="images/logo-r.svg" alt="BBB英会話スクール"></a>
       </h1>
-      <nav id="navi">
-        <ul class="header__nav">
-          <li><a href="products.html">PRODUCTS</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="company.html">COMPANY</a></li>
-          <li><a href="mailto:xxxxx@xxx.xxx.com?subject=お問い合わせ">CONTACT</a></li>
+      <nav class="header_navi">
+        <a href="#"><img src="images/logo-w.svg" alt="BBB英会話スクール"></a>
+        <ul class="header__menu">
+          <li><a href="#reason">BBBが選ばれる理由</a></li>
+          <li><a href="voice">受講生の声</a></li>
+          <li><a href="summary">スクールの概要</a></li>
         </ul>
+        <a class="btn" href="#">無料体験に申し込む</a>
       </nav>
-      <div class="toggle-btn">
+      <div class="hamburger">
+        <span></span>
         <span></span>
         <span></span>
       </div>
-      <div id="mask"></div>
     </header>
-    <main class="main">
-      <div class="main__top wrapper">
-        <ul class="main__product-list">
-          <li>
-            <a href="item1.html">
-              <img src="images/item1.jpg" alt="">
-              <p>プロダクトタイトルプロダクトタイトル</p>
-              <p>&yen;99,999 +tax</p>
-            </a>
-          </li>
-          <li>
-            <a href="item2.html">
-              <img src="images/item2.jpg" alt="">
-              <p>プロダクトタイトルプロダクトタイトル</p>
-              <p>&yen;99,999 +tax</p>
-            </a>
-          </li>
-          <li>
-            <a href="item3.html">
-              <img src="images/item3.jpg" alt="">
-              <p>プロダクトタイトルプロダクトタイトル</p>
-              <p>&yen;99,999 +tax</p>
-            </a>
-          </li>
-          <li>
-            <a href="item4.html">
-              <img src="images/item4.jpg" alt="">
-              <p>プロダクトタイトルプロダクトタイトル</p>
-              <p>&yen;99,999 +tax</p>
-            </a>
-          </li>
-          <li>
-            <a href="item5.html">
-              <img src="images/item5.jpg" alt="">
-              <p>プロダクトタイトルプロダクトタイトル</p>
-              <p>&yen;99,999 +tax</p>
-            </a>
-          </li>
-          <li>
-            <a href="item6.html">
-              <img src="images/item6.jpg" alt="">
-              <p>プロダクトタイトルプロダクトタイトル</p>
-              <p>&yen;99,999 +tax</p>
-            </a>
-          </li>
-          <li>
-            <a href="item7.html">
-              <img src="images/item7.jpg" alt="">
-              <p>プロダクトタイトルプロダクトタイトル</p>
-              <p>&yen;99,999 +tax</p>
-            </a>
-          </li>
-          <li>
-            <a href="item8.html">
-              <img src="images/item8.jpg" alt="">
-              <p>プロダクトタイトルプロダクトタイトル</p>
-              <p>&yen;99,999 +tax</p>
-            </a>
-          </li>
-        </ul>
-        <a href="products.html" class="main__btn">View More</a>
-      </div>
-    </main>
-    <footer class="footer wrapper">
-      <ul class="footer__menu">
-        <li>
-          <a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com/" target="_blank">TWITTER</a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/" target="_blank">FACEBOOK</a>
-        </li>
-      </ul>
-      <p class="footer__copyright">
-        &copy;  Furniture Design
-      </p>
-    </footer>
+
+    
     <script src="scripts/main.js"></script>
   </body>
 </html>
