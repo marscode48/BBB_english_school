@@ -5,8 +5,31 @@ Stylesheet: ベーススタイル
 ******************************************************************/
 @charset "UTF-8";
 
-
+html {
+  font-size: 100%;
+}
+body {
+  color: $cBlack;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  letter-spacing: 0.1em;
+}
+a {
+  color: $cBlack;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
 
 /*
 共通クラス
 */
+.wrapper {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
