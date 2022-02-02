@@ -32,16 +32,16 @@ const hamburger = document.querySelector('.hamburger');
 // ナビメニュー
 const navi = document.querySelector('#navi');
 
-hamburger.addEventListener('click', menuOpen);
-
-navi.addEventListener('click', menuOpen);
-
 function menuOpen() {
   hamburger.classList.toggle('active');
-
+  
   if(hamburger.classList.contains('active')) {
     navi.classList.add("active");
   } else {
     navi.classList.remove('active');
   }
 }
+
+hamburger.addEventListener('click', menuOpen);
+
+navi.addEventListener('click', menuOpen);
