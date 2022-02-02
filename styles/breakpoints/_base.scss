@@ -170,12 +170,10 @@ li {
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
-.main {
-  &__visual {
-    height: 720px;
-    position: relative;
-    margin-bottom: 120px;
-  }
+.mainvisual {
+  height: 720px;
+  position: relative;
+  margin-bottom: 120px;
 
   &__text {
     position: absolute;
