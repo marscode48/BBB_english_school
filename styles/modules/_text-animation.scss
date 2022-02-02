@@ -1,5 +1,5 @@
 /*-------------------------------------------
-Mainvisual のアニメーション
+Mainvisual のアニメーション(画像のフェード切り替え)
 -------------------------------------------*/
 .mainvisual__fade li {
   // 最初は非表示
@@ -34,5 +34,49 @@ Mainvisual のアニメーション
   }
   100% {
     opacity: 0;
+  }
+}
+
+/*-------------------------------------------
+Reason のアニメーション(スライド左)
+-------------------------------------------*/
+.reason .slide-left {
+  @include animation(
+    $name: slide-left,
+    $duration: 0.5s,
+    $timing-function: ease-out
+  );
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*-------------------------------------------
+Reason のアニメーション（スライド右）
+-------------------------------------------*/
+.reason .slide-right {
+  @include animation(
+    $name: slide-right,
+    $duration: 0.5s,
+    $timing-function: ease-out
+  );
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(150%);
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 1;
   }
 }

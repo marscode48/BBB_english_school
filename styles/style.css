@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*-------------------------------------------
-Mainvisual のアニメーション
+Mainvisual のアニメーション(画像のフェード切り替え)
 -------------------------------------------*/
 .mainvisual__fade li {
   opacity: 0;
@@ -81,6 +81,94 @@ Mainvisual のアニメーション
   }
 }
 
+/*-------------------------------------------
+Reason のアニメーション(スライド左)
+-------------------------------------------*/
+.reason .slide-left {
+  -webkit-animation-name: slide-left;
+          animation-name: slide-left;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*-------------------------------------------
+Reason のアニメーション（スライド右）
+-------------------------------------------*/
+.reason .slide-right {
+  -webkit-animation-name: slide-right;
+          animation-name: slide-right;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 1;
+  }
+}
+
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -110,12 +198,36 @@ li {
   list-style: none;
 }
 
+.mb-lg, .mainvisual, .reason {
+  margin-bottom: 120px;
+}
+
 /*
 共通クラス
 */
 .wrapper {
   width: 100%;
   max-width: 860px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  margin-bottom: 100px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: #333;
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  left: 0;
   margin: 0 auto;
 }
 
@@ -264,7 +376,6 @@ Mainvisual
 .mainvisual {
   height: 720px;
   position: relative;
-  margin-bottom: 120px;
 }
 
 .mainvisual__text {
@@ -337,6 +448,59 @@ Mainvisual
   height: 720px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/*-------------------------------------------
+Reason
+-------------------------------------------*/
+.reason__bg {
+  background-color: #FF2A2A;
+  padding: 80px 0;
+}
+
+.reason__slide {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  padding: 5%;
+  opacity: 0;
+}
+
+.reason__slide img {
+  width: auto;
+  height: 60px;
+  margin-right: 30px;
+}
+
+.reason__title {
+  color: #FF2A2A;
+  display: block;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.reason__text {
+  display: block;
+  font-size: 1.125rem;
+}
+
+.reason .inview-slide-left {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.reason .inview-slide-right {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 @media (max-width: 900px) {
