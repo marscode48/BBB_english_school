@@ -25,7 +25,7 @@ li {
   list-style: none;
 }
 .mb-lg {
-  margin-bottom: 120px;
+  margin-bottom: 120px !important;
 }
 
 /*
@@ -384,7 +384,6 @@ Voice
   }
   
   &__student {
-
     img {
       width: 120px;
       background-color: $cBgGray;
@@ -396,5 +395,51 @@ Voice
   &__name {
     font-size: 0.75rem;
     text-align: center;
+  }
+}
+
+/*-------------------------------------------
+Reason
+-------------------------------------------*/
+.summary {
+  background: url("../images/bg.gif") repeat;
+  padding: 60px 0;
+  @extend .mb-lg;
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    & li {
+      width: 48%;
+      background-color: $cWhite;
+      border-radius: 20px;
+      padding: 60px;
+      margin-bottom: 32px;
+
+      // 3つ目以降は設定しない
+      &:nth-child(n + 3) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+
+    .ja {
+      display: block;
+      font-size: 1.75rem;
+      margin-bottom: 15px;
+    }
+
+    .en {
+      display: block;
+      font-size: 1.125rem;
+      margin-bottom: 30px;
+    }
   }
 }

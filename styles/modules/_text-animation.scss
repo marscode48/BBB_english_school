@@ -102,3 +102,24 @@ Voice のアニメーション（吹き出し）
     opacity: 1;
   }
 }
+
+/*-------------------------------------------
+Summary のアニメーション（ドット画像の繰り返し）
+-------------------------------------------*/
+.summary {
+  @include animation(
+    $name: fall,
+    $duration: 10s,
+    $timing-function: linear,
+    $iteration-count: infinite
+  );
+}
+
+@keyframes fall {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -700px 700px;
+  }
+}
