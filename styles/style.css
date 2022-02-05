@@ -169,6 +169,52 @@ Reason のアニメーション（スライド右）
   }
 }
 
+/*-------------------------------------------
+Voice のアニメーション（吹き出し）
+-------------------------------------------*/
+.voice .balloon {
+  -webkit-animation-name: balloon;
+          animation-name: balloon;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes balloon {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes balloon {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -198,7 +244,7 @@ li {
   list-style: none;
 }
 
-.mb-lg, .mainvisual, .reason {
+.mb-lg, .mainvisual, .reason, .voice {
   margin-bottom: 120px;
 }
 
@@ -229,6 +275,31 @@ li {
   right: 0;
   left: 0;
   margin: 0 auto;
+}
+
+.voice__left, .voice__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  opacity: 0;
+  margin-bottom: 60px;
+}
+
+.voice__left .voice__text, .voice__right .voice__text {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #E9F1FB;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
 }
 
 /*-------------------------------------------
@@ -501,6 +572,65 @@ Reason
 .reason .inview-slide-right {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+}
+
+/*-------------------------------------------
+Voice
+-------------------------------------------*/
+.voice__left {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.voice__left:last-of-type {
+  margin-bottom: 0;
+}
+
+.voice__left .voice__text {
+  margin-left: 25px;
+}
+
+.voice__left .voice__text::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  margin-left: -30px;
+  border: 15px solid transparent;
+  border-right: 15px solid #E9F1FB;
+}
+
+.voice__right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.voice__right .voice__text {
+  margin-right: 25px;
+}
+
+.voice__right .voice__text::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 0;
+  margin-right: -30px;
+  border: 15px solid transparent;
+  border-left: 15px solid #E9F1FB;
+}
+
+.voice__student img {
+  width: 120px;
+  background-color: #CCCCCC;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.voice__name {
+  font-size: 0.75rem;
+  text-align: center;
 }
 
 @media (max-width: 900px) {

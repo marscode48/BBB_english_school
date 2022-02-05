@@ -55,6 +55,21 @@ li {
     margin: 0 auto;
   }
 }
+%voice-item {
+  display: flex;
+  align-items: flex-start;
+  opacity: 0;
+  margin-bottom: 60px;
+}
+%balloon-text {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  background-color: $cBalloon;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+}
 
 /*-------------------------------------------
 ヘッダー
@@ -316,7 +331,70 @@ Reason
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
+}
 
+/*-------------------------------------------
+Voice
+-------------------------------------------*/
+.voice {
+  @extend .mb-lg;
 
+  &__left {
+    @extend %voice-item;
+    justify-content: flex-start;
 
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    & .voice__text {
+      @extend %balloon-text;
+      margin-left: 25px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: 0;
+        margin-left: -30px;
+        border: 15px solid transparent;
+        border-right: 15px solid $cBalloon;
+      }
+    }
+  }
+
+  &__right {
+    @extend %voice-item;
+    justify-content: flex-end;
+
+    & .voice__text {
+      @extend %balloon-text;
+      margin-right: 25px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 60%;
+        right: 0;
+        margin-right: -30px;
+        border: 15px solid transparent;
+        border-left: 15px solid $cBalloon;
+      }
+    }
+  }
+  
+  &__student {
+
+    img {
+      width: 120px;
+      background-color: $cBgGray;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__name {
+    font-size: 0.75rem;
+    text-align: center;
+  }
 }
