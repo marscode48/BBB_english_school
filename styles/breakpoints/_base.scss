@@ -443,3 +443,41 @@ Reason
     }
   }
 }
+
+/*-------------------------------------------
+Entry
+-------------------------------------------*/
+.entry {
+  @extend .mb-lg;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &__catchphrase {
+    font-size: 1.125rem;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    background-color: $cRed;
+    border-radius: 40px;
+    border: solid 3px $cRed;
+    color: $cWhite;
+    font-size: 1.75rem;
+    font-weight: bold;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $cWhite;
+      border: solid 3px $cRed;
+      color: $cRed;
+    }
+  }
+}
