@@ -16,6 +16,51 @@
   }
 }
 
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+.header {
+  padding: 25px 0 0 25px;
 
+  & .hamburger {
+    width: 75px;
+    height: 75px;
+
+    & span {
+      width: 35px;
+      left: 21px;
+
+      &:nth-child(1) {
+        top: 26px;
+      }
+      &:nth-child(2) {
+        top: 37px;
+      }
+      &:nth-child(3) {
+        top: 48px;
+      }
+    }
+
+    &.active span:nth-child(1) {
+      top: 37px;
+      left: 21px;
+    }
+
+    &.active span:nth-child(2),
+    &.active span:nth-child(3) {
+      top: 37px;
+    }
+  }
+
+  // ナビメニュー
+  &__logo {
+    top: 25px;
+    left: 25px;
+  }
+
+  &__menu {
+    margin-top: 110px;
+  }
+}
 
 
