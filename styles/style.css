@@ -758,6 +758,55 @@ Entry
   color: #FF2A2A;
 }
 
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+.footer {
+  background-color: #E8E8E8;
+  padding: 60px 0 20px 0;
+}
+
+.footer a {
+  font-size: 0.875rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  opacity: 0.7;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.footer__inner > li {
+  width: 25%;
+}
+
+.footer__title {
+  font-weight: bold;
+}
+
+.footer__menu {
+  padding: 10px 0 0 10px;
+}
+
+.footer__menu li {
+  margin-bottom: 3px;
+}
+
+.footer__copyright {
+  font-size: 0.625rem;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   /******************************************************************
 

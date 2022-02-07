@@ -481,3 +481,47 @@ Entry
     }
   }
 }
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+.footer {
+  background-color: $cFooter;
+  padding: 60px 0 20px 0;
+
+  & a {
+    font-size: 0.875rem;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    & > li {
+      width: 25%;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__menu {
+    padding: 10px 0 0 10px;
+
+    & li {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__copyright {
+    font-size: 0.625rem;
+    text-align: center;
+  }
+}
