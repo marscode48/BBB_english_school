@@ -813,5 +813,15 @@ Entry
   Stylesheet: 900px以下のモニタで適用
 
   ******************************************************************/
+  .wrapper {
+    padding: 0 16px;
+  }
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 60px;
+  }
+  .section-title::after {
+    width: 80px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
