@@ -1010,5 +1010,17 @@ Summary
   .summary__title .en {
     font-size: 1rem;
   }
+  /*-------------------------------------------
+Entry
+-------------------------------------------*/
+  .entry__title {
+    font-size: 1.5rem;
+  }
+  .entry__catchphrase {
+    font-size: 1rem;
+  }
+  .entry__btn {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
