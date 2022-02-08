@@ -181,3 +181,30 @@ Voice
     }
   }
 }
+
+/*-------------------------------------------
+Summary
+-------------------------------------------*/
+.summary {
+  &__menu {
+    flex-direction: column;
+
+    & li {
+      width: 100%;
+      padding: 30px;
+
+      &:nth-child(3) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &__title {
+    & .ja {
+      font-size: 1.5rem;
+    }
+    & .en {
+      font-size: 1rem;
+    }
+  }
+}
