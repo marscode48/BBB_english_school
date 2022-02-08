@@ -813,6 +813,9 @@ Entry
   Stylesheet: 900px以下のモニタで適用
 
   ******************************************************************/
+  .mb-lg, .mainvisual, .reason, .voice, .summary, .entry {
+    margin-bottom: 80px !important;
+  }
   .wrapper {
     padding: 0 16px;
   }
@@ -860,6 +863,31 @@ Entry
   }
   .header__menu {
     margin-top: 110px;
+  }
+  /*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+  .mainvisual {
+    height: 490px;
+  }
+  .mainvisual__fade li {
+    width: 100%;
+  }
+  .mainvisual__fade li img {
+    height: 300px;
+  }
+  .mainvisual__text {
+    /* 両端に16pxづつ余白を作る */
+    width: calc(100% - 32px);
+    top: 310px;
+    left: 16px;
+  }
+  .mainvisual__title {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+  .mainvisual__btn {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
