@@ -1022,5 +1022,27 @@ Entry
   .entry__btn {
     font-size: 1.5rem;
   }
+  /*-------------------------------------------
+フッター
+-------------------------------------------*/
+  .footer__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__inner > li {
+    width: 50%;
+  }
+  .footer__inner > li:nth-of-type(1) {
+    margin-bottom: 30px;
+  }
+  .footer__inner > li:nth-of-type(2) {
+    margin-bottom: 30px;
+  }
+  .footer a {
+    font-size: 0.75rem;
+  }
+  .footer__title {
+    font-size: 0.9375rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
