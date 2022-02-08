@@ -17,6 +17,13 @@
     width: 80px;
   }
 }
+%voice-item {
+  margin-bottom: 40px;
+}
+%balloon-text {
+  width: 100%;
+  margin: 0 0 30px 0;
+}
 
 /*-------------------------------------------
 ヘッダー
@@ -132,6 +139,45 @@ Reason
       opacity: 1;
       // 左端の16pxに合わせる
       transform: translateX(16px);
+    }
+  }
+}
+
+/*-------------------------------------------
+Voice
+-------------------------------------------*/
+.voice {
+  &__student {
+    text-align: center;
+  }
+
+  &__left {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    & .voice__text {
+      &::before {
+        top: 100%;
+        border: 15px solid transparent;
+        border-top: 15px solid $cBalloon;
+        // ふきだしを中央に揃える
+        margin-left: calc(50% - 15px);
+      }
+    }
+  }
+
+  &__right {
+    flex-direction: column;
+    align-items: center;
+
+    & .voice__text {
+      &::before {
+        top: 100%;
+        border: 15px solid transparent;
+        border-top: 15px solid $cBalloon;
+        // ふきだしを中央に揃える
+        margin-right: calc(50% - 15px);
+      }
     }
   }
 }

@@ -826,6 +826,13 @@ Entry
   .section-title::after {
     width: 80px;
   }
+  .voice__left, .voice__right {
+    margin-bottom: 40px;
+  }
+  .voice__left .voice__text, .voice__right .voice__text {
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
   /*-------------------------------------------
 ヘッダー
 -------------------------------------------*/
@@ -944,6 +951,42 @@ Reason
       -webkit-transform: translateX(16px);
               transform: translateX(16px);
     }
+  }
+  /*-------------------------------------------
+Voice
+-------------------------------------------*/
+  .voice__student {
+    text-align: center;
+  }
+  .voice__left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .voice__left .voice__text::before {
+    top: 100%;
+    border: 15px solid transparent;
+    border-top: 15px solid #E9F1FB;
+    margin-left: calc(50% - 15px);
+  }
+  .voice__right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .voice__right .voice__text::before {
+    top: 100%;
+    border: 15px solid transparent;
+    border-top: 15px solid #E9F1FB;
+    margin-right: calc(50% - 15px);
   }
 }
 /*# sourceMappingURL=style.css.map */
