@@ -11,6 +11,6 @@ class Main {
   }
 
   _init() {
-navi.addEventListener('click', menuOpen);
+    new MenuOpen();
   }
 }
